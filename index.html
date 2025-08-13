@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LadeStack - Empowering Developers with AI Tools. Professional AI-powered development tools, multi-LLM support, and open-source collaboration.">
+    <meta name="keywords"
+        content="AI tools, developers, web development, programming, AI-powered tools, LadeStack, open-source tools">
+    <meta name="author" content="Girish Lade">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="LadeStack - Empowering Developers with AI Tools">
+    <meta property="og:description" content="Professional AI-powered development tools for modern developers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ladestack.com">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LadeStack - Empowering Developers with AI Tools">
+    <meta name="twitter:description" content="Professional AI-powered development tools for modern developers">
+
+    <title>LadeStack - Empowering Developers with AI Tools</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Clerk JavaScript SDK -->
+    <script async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_Y2F1c2FsLWNhdC0xMy5jbGVyay5hY2NvdW50cy5kZXYk"
+        src="https://clerk.com/clerk.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background Effects -->
+    <div class="animated-background">
+        <!-- Sparkles Container -->
+        <div class="sparkles-container" id="sparklesContainer"></div>
+
+        <!-- Technical Nodes Container -->
+        <div class="tech-nodes-container" id="techNodesContainer"></div>
+
+        <!-- Code Particles Container -->
+        <div class="code-particles-container" id="codeParticlesContainer"></div>
+
+        <!-- Geometric Shapes Container -->
+        <div class="geometric-shapes-container" id="geometricShapesContainer"></div>
+
+        <!-- Circuit Board Pattern -->
+        <div class="circuit-pattern"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>LadeStack</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+                <!-- Authentication Components -->
+                <div id="auth-container">
+                    <!-- Signed Out State -->
+                    <div id="signed-out" class="auth-buttons">
+                        <button id="sign-in-btn" class="btn btn-outline auth-btn">Sign In</button>
+                        <button id="sign-up-btn" class="btn btn-primary auth-btn">Sign Up</button>
+                    </div>
+
+                    <!-- Signed In State -->
+                    <div id="signed-in" class="auth-user" style="display: none;">
+                        <div class="user-menu">
+                            <button id="user-button" class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <div id="user-dropdown" class="user-dropdown">
+                                <div class="user-info">
+                                    <span id="user-name">Loading...</span>
+                                    <span id="user-email">Loading...</span>
+                                </div>
+                                <hr>
+                                <button id="manage-account-btn" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Manage Account
+                                </button>
+                                <button id="sign-out-btn" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Empowering Developers with
+                    <span class="gradient-text">AI Tools</span>
+                </h1>
+                <p class="hero-description">
+                    Professional AI-powered development tools designed for modern developers.
+                    Build faster, code smarter, and innovate with confidence.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-secondary">Explore Tools</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="ai-animation">
+                    <div class="floating-elements">
+                        <div class="element element-1"></div>
+                        <div class="element element-2"></div>
+                        <div class="element element-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose LadeStack?</h2>
+                <p>Cutting-edge AI tools designed to supercharge your development workflow</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Development</h3>
+                    <p>Leverage advanced AI models to accelerate your coding, testing, and deployment processes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Multi-LLM Support</h3>
+                    <p>Integrate with multiple language models including GPT, Claude, and Gemini for diverse AI
+                        capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Open Source</h3>
+                    <p>Built with transparency and community collaboration at its core. Contribute and customize freely.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Productivity Focused</h3>
+                    <p>Streamlined interfaces and intelligent automation to maximize your development efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Explore our suite of AI-powered development tools</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>API Testing & Documentation</h3>
+                        <p>Professional API testing platform with AI-powered documentation generation. A modern
+                            alternative to Postman with intelligent features.</p>
+                        <button class="btn btn-outline">Try It Now</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Website Builder</h3>
+                        <p>Create stunning websites with Gemini 2.5 Pro integration. Generate layouts, content, and code
+                            with natural language prompts.</p>
+                        <button class="btn btn-outline">Try It Now</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>File Management Platform</h3>
+                        <p>Intelligent file organization and sharing platform. A powerful alternative to Google Drive
+                            with AI-enhanced search and collaboration.</p>
+                        <button class="btn btn-outline">Try It Now</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Docs Summarizer</h3>
+                        <p>AI-powered document analysis and summarization tool. Extract key insights from lengthy
+                            documents in seconds.</p>
+                        <div class="coming-soon">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Demo -->
+    <section class="ai-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Try Our AI in Action</h2>
+                <p>Experience the power of LadeStack's AI capabilities</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-input">
+                    <textarea id="demoPrompt"
+                        placeholder="Ask me anything about web development, AI, or programming..."></textarea>
+                    <button class="btn btn-primary" id="demoSubmit">Generate Response</button>
+                </div>
+                <div class="demo-output" id="demoOutput">
+                    <div class="demo-placeholder">
+                        <i class="fas fa-magic"></i>
+                        <p>Your AI-generated response will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!- - Tech News Section -->
+        <section class="tech-news">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest in Tech & AI</h2>
+                    <p>Stay updated with the trends we're following</p>
+                </div>
+                <div class="news-carousel">
+                    <div class="news-item">
+                        <div class="news-image">
+                            <div class="news-placeholder">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h4>The Future of AI in Web Development</h4>
+                            <p>Exploring how AI is transforming the way we build and deploy web applications.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-image">
+                            <div class="news-placeholder">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h4>Multi-Modal AI Models Revolution</h4>
+                            <p>How next-generation AI models are changing developer workflows and productivity.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-image">
+                            <div class="news-placeholder">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h4>Open Source AI Tools Ecosystem</h4>
+                            <p>The growing landscape of open-source AI development tools and frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Developers Say</h2>
+                    <p>Trusted by developers across India and beyond</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"LadeStack's AI tools have made my development workflow so much faster. The API testing
+                                tool is a game-changer!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ravi Kumar</h4>
+                                <span>Full Stack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"It's like having a personal assistant for coding and design. The AI integration is
+                                seamless and intuitive."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Priya Mehta</h4>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Seamless AI integration and powerful features. My go-to toolkit for all development
+                                projects."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Amit Sharma</h4>
+                                <span>Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Meet Girish Lade</h2>
+                        <p class="about-subtitle">Programmer • UI/UX Designer • AI Tools Maker</p>
+                        <p>
+                            Passionate about creating AI-powered tools that empower developers worldwide.
+                            With expertise in programming, design, and artificial intelligence, I build
+                            innovative solutions that bridge the gap between complex AI capabilities and
+                            practical developer needs.
+                        </p>
+                        <p>
+                            Through LadeStack, I explore cutting-edge AI experiments, develop open-source
+                            tools, and stay at the forefront of global tech trends. My mission is to make
+                            AI accessible and useful for developers at every level.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>10+</h3>
+                                <span>AI Projects</span>
+                            </div>
+                            <div class="stat">
+                                <h3>1000+</h3>
+                                <span>Developers Helped</span>
+                            </div>
+                            <div class="stat">
+                                <h3>5+</h3>
+                                <span>Open Source Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="profile-photo">
+                            <img src="IMG20241201100709.jpg" alt="Girish Lade - Programmer, UI/UX Designer, AI Tools Maker" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <! -- Newsletter Section -->
+            <section class="newsletter">
+                <div class="container">
+                    <div class="newsletter-content">
+                        <h2>Stay Updated</h2>
+                        <p>Get the latest updates on new tools, AI trends, and development insights</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                        <p class="newsletter-note">Join 500+ developers already subscribed. No spam, unsubscribe
+                            anytime.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="contact" class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>LadeStack</h3>
+                            <p>Empowering developers with AI tools for the future of software development.</p>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/girish_lade_/" target="_blank"
+                                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/girish-lade-075bba201/" target="_blank"
+                                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/girishlade111" target="_blank" aria-label="GitHub"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://codepen.io/Girish-Lade-the-looper" target="_blank"
+                                    aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+                                <a href="mailto:girishlade111@gmail.com" aria-label="Email"><i
+                                        class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Contact</h4>
+                            <p>Have questions or want to collaborate?</p>
+                            <a href="mailto:girishlade111@gmail.com" class="contact-email">girishlade111@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 LadeStack. All rights reserved. Built with ❤️ by Girish Lade</p>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="script.js"></script>
+</body>
+
+</html>
